@@ -39,10 +39,10 @@ function App() {
       <section className="hero" aria-labelledby="hero-heading">
         <div className="hero-orbit" aria-hidden="true"><img src="/brand-logo.png" alt="" /></div>
         <div className="hero-grid">
-          <div className="hero-title-wrap"><p className="eyebrow"><span className="eyebrow-dot" />ESTUDIO CREATIVO INDEPENDIENTE</p><h1 id="hero-heading">Juntos,<br /><span>imaginamos</span><br />lo que sigue.</h1></div>
-          <div className="hero-copy"><span className="orange-rule" /><p>Las marcas que dejan huella empiezan con una buena pregunta. Nosotros te acompañamos a encontrar las respuestas y transformarlas en algo real.</p><a className="text-link" href="#servicios">Descubrí lo que hacemos <span className="link-box"><ArrowRight size={18} /></span></a></div>
+          <div className="hero-title-wrap"><h1 id="hero-heading"><span className="hero-heading-line hero-heading-line--lead"><strong>Juntos,</strong><em>imaginamos</em></span><span className="hero-heading-line hero-heading-line--finish">lo que sigue.</span></h1></div>
+          <div className="hero-copy"><p>Las marcas que dejan huella empiezan con una buena pregunta. Nosotros te acompañamos a encontrar las respuestas y transformarlas en algo real.</p><a className="hero-cta" href="#servicios">Descubrí lo que hacemos <ArrowRight size={16} /></a></div>
         </div>
-        <div className="hero-controls"><span className="hero-counter"><i /> 01 <span>/</span> 03</span><a href="#ideas" className="scroll-cue">BAJÁ PARA EXPLORAR <ArrowDown size={13} /></a><span className="hero-coordinates">34°36' S&nbsp;&nbsp; 58°22' O</span></div>
+        <div className="hero-controls"><span className="hero-services-meta">DISEÑO · DESARROLLO · PUBLICIDAD</span><a href="#ideas" className="scroll-cue">BAJÁ PARA EXPLORAR <ArrowDown size={13} /></a></div>
       </section>
       <section className="stories" id="ideas" aria-label="Ideas y proyectos">
         {stories.map((story, i) => <a href="#contacto" className="story-card" id={`proyecto-${i + 1}`} key={story.title}>
@@ -51,7 +51,27 @@ function App() {
         </a>)}
       </section>
       <section className="intro section-shell" id="estudio"><div className="intro-label"><span className="orange-rule" /><span>UN ESTUDIO, MUCHAS POSIBILIDADES</span></div><div><h2>Lo hacemos<br />con <em>intención.</em></h2><p>Somos un estudio creativo que cruza estrategia, diseño y tecnología para ayudar a las marcas a avanzar. Pensamos cada detalle. Creamos cada oportunidad en equipo.</p><a className="text-link" href="#servicios">Conocé el estudio <span className="link-box"><ArrowRight size={18} /></span></a></div></section>
-      <section className="services section-shell" id="servicios"><div className="services-head"><span className="eyebrow">LO QUE HACEMOS</span><h2>Una idea, de principio a fin.</h2></div><div className="service-list"><a href="#contacto"><span>01</span><b>Estrategia & marca</b><small>Una dirección clara para crecer.</small><ArrowUpRight /></a><a href="#contacto"><span>02</span><b>Identidad & diseño</b><small>Una marca con algo propio para decir.</small><ArrowUpRight /></a><a href="#contacto"><span>03</span><b>Experiencias digitales</b><small>Ideas que también se viven online.</small><ArrowUpRight /></a></div></section>
+      <section className="services section-shell" id="servicios" aria-labelledby="services-title">
+        <div className="services-visual">
+          <span className="services-kicker">SERVICIOS</span>
+          <div className="service-diagram" role="img" aria-label="Publicidad, diseño y desarrollo se unen en Quanti">
+            <span className="diagram-circle diagram-circle--ads" />
+            <span className="diagram-circle diagram-circle--design" />
+            <span className="diagram-circle diagram-circle--development" />
+            <div className="diagram-group diagram-group--ads"><b>PUBLICIDAD</b><span className="diagram-underline" /><div className="diagram-tags"><span>Estrategia</span><span>Anuncios</span><span>Copywriting</span><span>Optimización</span></div></div>
+            <div className="diagram-group diagram-group--design diagram-group--side"><b>DISEÑO</b><span className="diagram-underline" /><div className="diagram-tags diagram-tags--side"><span>Branding</span><span>Web</span><span>Gráfica</span><span>Arte</span><span>Identidad visual</span></div></div>
+            <div className="diagram-group diagram-group--development diagram-group--side"><b>DESARROLLO</b><span className="diagram-underline" /><div className="diagram-tags diagram-tags--side"><span>Sitios y apps</span><span>Interfaces</span><span>Prototipos</span><span>Rendimiento</span></div></div>
+            <span className="diagram-center"><img src="/quanti-icon.png" alt="" /></span>
+          </div>
+        </div>
+        <div className="services-copy">
+          <h2 id="services-title">¿QUÉ HACEMOS Y<br className="mobile-title-break" /> CÓMO LO HACEMOS?</h2>
+          <span className="orange-rule" />
+          <p>Convertimos <strong>ideas</strong> en proyectos que generan <strong>resultados.</strong> Acompañamos cada proceso de principio a fin: escuchamos lo que necesitás, desarrollamos una <strong>estrategia</strong> y la llevamos a la práctica con <strong>creatividad,</strong> criterio y atención al detalle.</p>
+          <p>Creamos <strong>sitios web, campañas publicitarias</strong> y estrategias para <strong>atraer clientes;</strong> también ayudamos a las marcas a comunicarse y crecer en <strong>redes sociales.</strong> Trabajamos en equipo y de forma cercana, desde el primer <strong>briefing</strong> hasta la <strong>entrega final,</strong> para que cada solución tenga sentido para tu negocio.</p>
+          <p className="services-promise"><b>¿Tenés una idea?</b> <strong>La hacemos realidad.</strong></p>
+        </div>
+      </section>
       <section className="contact section-shell" id="contacto"><div><span className="eyebrow">¿LO PENSAMOS JUNTOS?</span><h2>Tu próxima idea<br />empieza acá.</h2></div><a className="contact-button" href="mailto:hola@tumarca.com">HABLEMOS <ArrowUpRight size={18} /></a></section>
     </main>
     <footer className="footer"><Logo /><span>© 2026 TU MARCA · HECHO CON INTENCIÓN</span><a href="mailto:hola@tumarca.com">HOLA@TUMARCA.COM ↗</a></footer>
